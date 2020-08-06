@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="input-image" value=""><br><br>
+            <input type="submit" name="submit" value="Parse!">
+        </form>
+        <br>
+        {% if nothing %}
+        <p>No image uploaded. Try again.</p>
+        {% endif %}
+        {% if parsed %}
+        <h3>Detected Expression</h3>
+        <textarea name="parsed-expn" rows="8" cols="80">{{ parsed }}</textarea><br>
+        <h3>Detected Expression in LaTeX</h3>
+        <textarea name="parsed-expn-latex" rows="8" cols="80">{{ parsed_latex }}</textarea>
+        {% endif %}
+        {% if answer %}
+        <h3>Answer</h3>
+        <input type="text" name="answer-field" value="{{ answer }}" size="{{ answer_length }}">
+        <!-- <textarea name="answer-field" rows="8" cols="80">{{ answer }}</textarea><br> -->
+        {% endif %}
+        {% if steps %}
+        <h3>Solution</h3>
+        <textarea name="sol-steps" rows="{{ area_rows }}" cols="80">{{ steps }}</textarea><br>
+        {% endif %}
+    </body>
+</html>
