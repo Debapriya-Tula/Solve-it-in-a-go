@@ -6,7 +6,7 @@ A Django web app which takes in an image of a math expression and returns you th
 Run `pip install -r requirements.txt` to install all the dependencies. Please ensure you have CUDA installed to run the program. Predictions made using CPU are observed to be erraneous.
 
 ## How to run the web-app?
-`cd Solve-it-in-a-go/`
+`cd Solve-it-in-a-go/`<br>
 `python3 manage.py runserver`
 
 
