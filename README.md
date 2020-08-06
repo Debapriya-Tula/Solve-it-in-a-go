@@ -1,5 +1,5 @@
 # Solve it in a go
-A Django web app which takes in an image of a math expression and returns you the answer as well as the solution for the same. It also returns the latex equivalent of the expression/equation in the input image. The tool is built with a primary objective to help educationally disadvantaged parents evaluate their children's math homeworks.
+A Django web app which takes in an image of a math expression and returns you the answer as well as the solution for the same. It also returns the LaTeX equivalent of the expression/equation in the input image. The tool is built with a primary objective to help educationally disadvantaged parents evaluate their children's math homeworks.
 
 
 ## setup
